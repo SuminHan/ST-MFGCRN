@@ -1,7 +1,5 @@
 # Supplementary Material
 
-Paper ID: 984
-
 Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Prediction
 
 **Table of Contents**
