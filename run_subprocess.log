@@ -1,0 +1,90 @@
+(MainThread) reading process list
+(blocking_0) wait_for_task starting
+(blocking_1) wait_for_task starting
+(blocking_2) wait_for_task starting
+(blocking_3) wait_for_task starting
+(blocking_0) (0/85) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_1) (0/84) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_3) (0/83) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_2) (0/82) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_2) (0/81) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_3) (0/80) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_1) (0/79) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_0) (0/78) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T0
+(blocking_2) (0/77) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -e adj_mat --memo=T0
+(blocking_3) (0/76) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BUS_INFO -e adj_mat --memo=T0
+(blocking_1) (0/75) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n ENT_EMP -e adj_mat --memo=T0
+(blocking_0) (0/74) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LOCAL -e adj_mat --memo=T0
+(blocking_0) (0/73) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LU_TY -e adj_mat --memo=T0
+(blocking_1) (0/72) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n POP -e adj_mat --memo=T0
+(blocking_2) (0/71) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat --memo=T0
+(blocking_3) (0/70) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight --memo=T0
+(blocking_3) (0/69) CUDA_VISIBLE_DEVICES=3  --memo=T0
+(blocking_3) (1/68) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_3) (1/67) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_3) (1/66) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_3) (1/65) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_2) (1/64) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_0) (1/63) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_1) (1/62) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_2) (1/61) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T1
+(blocking_3) (1/60) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -e adj_mat --memo=T1
+(blocking_0) (1/59) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BUS_INFO -e adj_mat --memo=T1
+(blocking_1) (1/58) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n ENT_EMP -e adj_mat --memo=T1
+(blocking_3) (1/57) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LOCAL -e adj_mat --memo=T1
+(blocking_0) (1/56) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LU_TY -e adj_mat --memo=T1
+(blocking_1) (1/55) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n POP -e adj_mat --memo=T1
+(blocking_3) (1/54) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat --memo=T1
+(blocking_0) (1/53) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight --memo=T1
+(blocking_1) (1/52) CUDA_VISIBLE_DEVICES=1  --memo=T1
+(blocking_1) (2/51) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_2) (2/50) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_0) (2/49) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_3) (2/48) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_2) (2/47) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_1) (2/46) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_0) (2/45) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_3) (2/44) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T2
+(blocking_2) (2/43) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -e adj_mat --memo=T2
+(blocking_0) (2/42) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BUS_INFO -e adj_mat --memo=T2
+(blocking_2) (2/41) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n ENT_EMP -e adj_mat --memo=T2
+(blocking_1) (2/40) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LOCAL -e adj_mat --memo=T2
+(blocking_0) (2/39) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LU_TY -e adj_mat --memo=T2
+(blocking_2) (2/38) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n POP -e adj_mat --memo=T2
+(blocking_1) (2/37) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat --memo=T2
+(blocking_2) (2/36) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight --memo=T2
+(blocking_3) (2/35) CUDA_VISIBLE_DEVICES=3  --memo=T2
+(blocking_3) (3/34) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_0) (3/33) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_1) (3/32) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_2) (3/31) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_3) (3/30) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_1) (3/29) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_0) (3/28) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_2) (3/27) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T3
+(blocking_3) (3/26) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -e adj_mat --memo=T3
+(blocking_1) (3/25) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BUS_INFO -e adj_mat --memo=T3
+(blocking_0) (3/24) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n ENT_EMP -e adj_mat --memo=T3
+(blocking_3) (3/23) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LOCAL -e adj_mat --memo=T3
+(blocking_1) (3/22) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LU_TY -e adj_mat --memo=T3
+(blocking_0) (3/21) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n POP -e adj_mat --memo=T3
+(blocking_3) (3/20) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat --memo=T3
+(blocking_3) (3/19) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight --memo=T3
+(blocking_2) (3/18) CUDA_VISIBLE_DEVICES=2  --memo=T3
+(blocking_2) (4/17) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_1) (4/16) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_0) (4/15) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_3) (4/14) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_1) (4/13) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_2) (4/12) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_0) (4/11) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_3) (4/10) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP -e adj_mat --memo=T4
+(blocking_1) (4/9) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BD_AREA -e adj_mat --memo=T4
+(blocking_0) (4/8) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n BUS_INFO -e adj_mat --memo=T4
+(blocking_2) (4/7) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n ENT_EMP -e adj_mat --memo=T4
+(blocking_1) (4/6) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LOCAL -e adj_mat --memo=T4
+(blocking_0) (4/5) CUDA_VISIBLE_DEVICES=0 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n LU_TY -e adj_mat --memo=T4
+(blocking_2) (4/4) CUDA_VISIBLE_DEVICES=2 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -n POP -e adj_mat --memo=T4
+(blocking_3) (4/3) CUDA_VISIBLE_DEVICES=3 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat --memo=T4
+(blocking_1) (4/2) CUDA_VISIBLE_DEVICES=1 python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight --memo=T4
+(blocking_3) (4/1) CUDA_VISIBLE_DEVICES=3  --memo=T4

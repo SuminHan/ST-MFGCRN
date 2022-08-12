@@ -1,0 +1,27 @@
+# Baseline Experiment
+python traincpt.py --model_name=MyDCGRU   
+python traincpt.py --model_name=MyGMAN    
+python traincpt.py --model_name=MyDeepSTN 
+python traincpt.py --model_name=MySTResNet
+python traincpt.py --model_name=MyConvLSTM
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+
+# Feature Influence
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight                         
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat             
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n BD_AREA 
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n BUS_INFO
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n ENT_EMP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n LOCAL 
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n LU_TY
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight -e adj_mat  -n POP
+
+# Module Ablation
+python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=weight  -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=weight  -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=mean --fusion=add     -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=mean --fusion=add     -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=weight  -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=weight  -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=x --mgcn=cat  --fusion=add     -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP
+python traincpt.py --model_name=MySTMFGCRN --sentinel=o --mgcn=cat  --fusion=add     -e adj_mat -n BD_AREA -n BUS_INFO -n ENT_EMP -n LOCAL -n LU_TY -n POP

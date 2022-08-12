@@ -1,0 +1,7 @@
+python train.py 
+python train.py --feat LU_TY
+python train.py --feat BUS_INFO
+python train.py --feat ENT_EMP
+python train.py --feat LOCAL
+python train.py --feat BD_AREA
+python train.py --feat POP
