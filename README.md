@@ -220,7 +220,12 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 # 3. Full Dataset
 
 We share sample data in the Microsoft CMT submission system, however, since its maximal level is only 10MB. Unfortunately, we have not found any better file sharing service with anonymization. We share our full dataset through anonymous link:
-https://anonfiles.com/3d35j0U1x8/process-qt-CPT-190301-190501-190601-190701_pkl
+
+Daejeon: https://anonymfile.com/6jVd/process-qt-cpt-190301-190501-190601-190701.pkl
+
+TaxiBJ: https://anonymfile.com/JRZg/process-qt-cpt-bj-150201-150603-150617-150701.pkl
+
+(original dataset in: https://github.com/panzheyi/ST-MetaNet)
 
 # 4. Implementation Code
 
