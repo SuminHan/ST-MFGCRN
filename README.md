@@ -3,12 +3,35 @@
 Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Prediction
 
 **Table of Contents**
-1. Details of Regional Feature
-2. Supplementary Results
-3. Full Dataset
-4. Implementation Code
+1. Performance Comparison
+2. Details of Regional Feature
+3. Supplementary Results
+4. Full Dataset
+5. Implementation Code
 
-# 1. Details of Regional Feature
+
+# 1. Performance Comparison
+
+|                | BusDJ  |       | TaxiBJ  |         |
+|----------------|--------|-------|---------|---------|
+| Model          | RMSE   | MAE   | RMSE    | MAE     |
+| Trend Mean     | 11.365 | 6.845 | 307.430 | 199.915 |
+| Period Mean    | 15.384 | 8.818 | 309.706 | 198.528 |
+| Closeness Mean | 15.804 | 8.949 | 225.092 | 159.634 |
+| Last Repeat    | 13.638 | 8.648 | 116.877 |  72.842 |
+| ConvLSTM       |  9.284 | 5.901 | 100.939 |  57.500 |
+| STResNet       |  9.288 | 5.924 | 103.689 |  63.305 |
+| DeepSTN+       |  9.222 | 5.875 | 107.319 |  64.830 |
+| DCRNN          |  9.530 | 6.157 | 107.138 |  66.566 |
+| ASTGCN         | 10.705 | 6.588 | 126.197 |  75.555 |
+| STMGCN         | 10.088 | 6.399 | 110.993 |  71.346 |
+| GMAN           |  9.138 | 5.866 | 102.276 |  56.109 |
+| DCRNN+STE+CPT  |  8.778 | 5.646 | 106.756 |  62.876 |
+| GMAN+STE+CPT   |  8.919 | 5.714 | 113.828 |  67.689 |
+| ST-MFGCRN      |  8.464 | 5.499 |  92.767 |  52.443 |
+
+
+# 2. Details of Regional Feature
 
 1. Transit feature: The higher degree of transit supply accompanies higher transit demand. The neighborhoods with dense transit stations give better accessibility to transit service and so it makes travelers use transit more. In addition, the possibility of going to diverse areas (i.e., the number of bus routes) attracts users to use transit.
     * (BUS INFO) This feature includes the number of bus stops in the cells and routes passing through the cells.
@@ -22,9 +45,9 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
     * (EMP) the number of employments by industry types in each cell. We use it concatenated with ENTEMP in the experiment.
 
 
-# 2. Supplementary Results
+# 3. Supplementary Results
 
-## 2.1. Feature Influence (Section 6.2)    
+## 3.1. Feature Influence (Section 6.2)    
 | K | Proximity | LU | POI (LOCAL) | BUS | POP | ENT_EMP | BD |   MAE  |  RMSE  |  NMAE  |
 |:-:|:---------:|:--:|:-----------:|:---:|:---:|:-------:|:--:|:------:|:------:|:------:|
 | 0 |     O     |  X |      X      |  X  |  X  |    X    |  X | 5.5293 | 8.5130 | 0.1605 |
@@ -115,9 +138,9 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 | 6 |     O     |  O |      O      |  O  |  O  |    O    |  O | 5.5099 | 8.4765 | 0.1599 |
 
 
-## 2.2. Analysis of feature influence on the model (Section 6.2, Fig. 5)
+## 3.2. Analysis of feature influence on the model (Section 6.2, Fig. 5)
 
-### 2.2.1. LU
+### 3.2.1. LU
 | LU_TY (kr)   | LU_TY (en)                  | Top10     | Average   | Poor      |
 |--------------|-----------------------------|-----------|-----------|-----------|
 | 자연녹지지역 | green use                   | 1815422.2 | 1923115.6 | 2081094.9 |
@@ -127,7 +150,7 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 | 공업지역     | industrial use              |   64766.7 |   86134.0 |   47072.4 |
 | 근린상업지역 | neighborhood commercial use |   10847.0 |    3313.9 |    3920.3 |
 
-### 2.2.1. POI (LOCAL)
+### 3.2.1. POI (LOCAL)
 
 | POI (LOCAL-kr)             | POI (LOCAL-en)                             | Top10 | Average | Poor  |
 |----------------------------|--------------------------------------------|-------|---------|-------|
@@ -201,7 +224,7 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 | 65-85 | 1964.9 |  1446.5 | 1650.1 |
 
 
-## 2.3. Module ablation study (Section 6.3)
+## 3.3. Module ablation study (Section 6.3)
 
 | Model Setting |      |        |  Overall MAE |             |        |             |        |        |         |        |
 |:-------------:|:----:|:------:|:------------:|:-----------:|:------:|:-----------:|:------:|:------:|:-------:|:------:|
@@ -217,17 +240,17 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 
 
 
-# 3. Full Dataset
+# 4. Full Dataset
 
-We share sample data in the Microsoft CMT submission system, however, since its maximal level is only 10MB. Unfortunately, we have not found any better file sharing service with anonymization. We share our full dataset through anonymous link:
+We share our full dataset through anonymous link:
 
-Daejeon: https://anonymfile.com/6jVd/process-qt-cpt-190301-190501-190601-190701.pkl
+Daejeon: https://anonymfile.com/LajJ1/process-qt-cpt-190301-190501-190601-190701.pkl
 
-TaxiBJ: https://anonymfile.com/JRZg/process-qt-cpt-bj-150201-150603-150617-150701.pkl
+TaxiBJ: https://anonymfile.com/AWz7E/process-qt-cpt-bj-150201-150603-150617-150701.pkl
 
 (original dataset in: https://github.com/panzheyi/ST-MetaNet)
 
-# 4. Implementation Code
+# 5. Implementation Code
 
 We open our implementation code which runs on tensorflow 1.15.1, cuda 10.1 version. We cleaned and organized the code we used for our experiment. We checked it produces consistent performance, however, in case we modified some module during the cleaning process, we leave the original code as well in "./old-backup".
 
