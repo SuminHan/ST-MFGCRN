@@ -28,8 +28,10 @@ Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Pred
 | GMAN           |  9.138 | 5.866 | 102.276 |  56.109 |
 | DCRNN+STE+CPT  |  8.778 | 5.646 | 106.756 |  62.876 |
 | GMAN+STE+CPT   |  8.919 | 5.714 | 113.828 |  67.689 |
-| ST-MFGCRN      |  8.464 | 5.499 |  92.767 |  52.443 |
+| **ST-MFGCRN (best)**      |  **8.464** | **5.499** |  **92.767** |  **52.443** |
 
+
+* Best: BusDJ: BD, ENT, POI, LU / TaxiBJ: POI, ROAD
 
 # 2. Details of Regional Feature
 
