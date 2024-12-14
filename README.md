@@ -1,3 +1,108 @@
+# ST-MFGCRN Execution Manual
+
+---
+
+### I. Introduction: Philosophy and Purpose of ST-MFGCRN
+
+ST-MFGCRN is an advanced deep learning framework designed to explore complex spatiotemporal data interactions and predict traffic or other time-series data using graph-based recurrent neural networks. This manual provides detailed instructions to efficiently run the project.
+
+---
+
+### II. Environment Setup and Requirements
+
+1. **System Requirements**:
+    - Operating System: Ubuntu 20.04, macOS 11 or later, or Windows Subsystem for Linux (WSL) recommended.
+    - Python Version: 3.8 or higher.
+    - Memory: Minimum 16GB RAM.
+    - GPU: CUDA 11.0 compatible GPU (NVIDIA RTX 30 series recommended).
+
+2. **Dependency Installation**:
+    - Install Python packages based on the `requirements.txt`:
+      ```bash
+      pip install -r ./ST-MFGCRN-master/ASTGCN/requirements.txt
+      ```
+    - To use a Docker environment, build the necessary setup using the Dockerfile:
+      ```bash
+      cd ./ST-MFGCRN-master/ASTGCN/docker
+      docker build -t st-mfgcrn-env .
+      ```
+
+3. **Data Preparation**:
+    - Preprocessed sample data is included:
+      - `process-qt-CPT-BJ-sample-150610-150617-150624-150701.pkl`
+      - `process-qt-CPT-sample-190301-190310-190317-190324.pkl`
+    - For custom datasets, ensure data format compliance by referring to `STMetaNet/data/dataloader.py`.
+
+---
+
+### III. Project Structure
+
+1. **Directory Overview**:
+    - `ASTGCN`: Submodule for training and running ASTGCN models.
+    - `STMetaNet`: Core component of ST-MFGCRN.
+    - `regional-dataset`: Regional data-related CSV and GeoJSON files.
+    - `node2vec`: Node2Vec implementation for graph embedding generation.
+    - `old-backup`: Backup of previous code versions.
+
+2. **Key Files**:
+    - `train.py`: Core script for training the model.
+    - `configurations/*.conf`: Configuration files for each dataset.
+    - `mymodels.py`: Definitions of various model architectures.
+    - `run_subprocess.py`: Utility for parallel execution.
+
+---
+
+### IV. Execution Steps
+
+1. **Graph Structure Generation**:
+    - Execute `generateSE.py` in the `node2vec` directory to generate node embeddings:
+      ```bash
+      python ./ST-MFGCRN-master/node2vec/generateSE.py
+      ```
+
+2. **Model Training**:
+    - Train the ST-MFGCRN model using `STMetaNet/train.py`.
+    - Define training parameters using a YAML configuration file:
+      ```bash
+      python ./ST-MFGCRN-master/STMetaNet/train.py --config ./ST-MFGCRN-master/STMetaNet/model_setting/st-metanet.yaml
+      ```
+
+3. **Model Testing**:
+    - Evaluate the trained model using `STMetaNet/test.py`:
+      ```bash
+      python ./ST-MFGCRN-master/STMetaNet/test.py --config ./ST-MFGCRN-master/STMetaNet/model_setting/st-metanet.yaml
+      ```
+
+4. **Module-Specific Experiments**:
+    - Conduct separate experiments using the `ASTGCN` module:
+      ```bash
+      python ./ST-MFGCRN-master/ASTGCN/train-daejeon.py
+      ```
+
+---
+
+### V. Notes
+
+1. **Data Integrity Check**:
+    - Ensure temporal and spatial alignment of data.
+    - Input data must be in `.pkl` format, adhering to the schema defined in `dataloader.py`.
+
+2. **Log Management**:
+    - Track errors during execution using the `run_subprocess.log` file.
+
+3. **Code Modification and Extension**:
+    - Customize model architectures by modifying `MFGCGRU_cell.py` and `DeepSTN_net.py`.
+    - For additional graph structures, refer to `graph.py`.
+
+---
+
+### VI. Conclusion
+
+ST-MFGCRN is a cutting-edge spatiotemporal data learning framework that offers flexibility in model configuration and execution. By following the guidelines in this manual, users can effectively harness the complex structure of the project.
+
+
+---
+
 # Supplementary Material
 
 Paper Title: Multiple Regional Feature-aware Spatio-temporal Public Transit Prediction
